@@ -1,0 +1,503 @@
+:root {
+  --bg-body: #f4f7fc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+
+  --color-primary: #0f172a;
+  --color-accent: #3b82f6;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --header-height: 70px;
+.panel-list { grid-column: 1; grid-row: 1; }
+.panel-pred-left { grid-column: 1; grid-row: 2; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; /* permitir scroll de página completa */
+}
+
+/* Tabla (ajustada) */
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 18vh; /* liberar más espacio para la card inferior */
+}
+
+/* Header */
+header {
+  height: var(--header-height);
+  margin-top: 15px;
+  margin-bottom: 8px;
+  background: var(--bg-card);
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+  z-index: 10;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+  padding: 12px;
+  position: relative;
+  height: 100%;
+  color: var(--color-danger);
+}
+
+.header-brand h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-primary);
+}
+
+.header-brand p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-muted);
+  border-left: 1px solid #cbd5e1;
+  padding-left: 12px;
+  margin-left: 12px;
+}
+
+/* Panel config */
+#configPanel form {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #f8fafc;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+}
+
+#configPanel label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#configPanel input {
+  width: 60px;
+  padding: 4px 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 13px;
+  text-align: center;
+}
+
+#configPanel button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#configPanel button:hover { background: #334155; }
+
+/* Main grid */
+main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: 1fr 1fr; /* dividir espacio disponible en dos filas iguales */
+  gap: 8px;
+  height: calc(100vh - var(--header-height)); /* espacio total sin incluir header */
+  overflow: hidden;
+}
+
+.panel-list {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.panel-map {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.panel-chart {
+  grid-column: 2;
+  grid-row: 2;
+  overflow: hidden; /* nada de scroll */
+  height: 100%; /* ocupar todo el espacio de la fila */
+}
+
+
+/* Cards */
+section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  padding: 4px; /* reducir padding para que no recorte contenido */
+  height: 100%; /* que ocupe todo el contenedor */
+}
+
+section h2 {
+  margin: 0;
+  padding: 8px 12px; /* más compacto */
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 1px solid #f1f5f9;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section h2 i { color: var(--text-muted); opacity: 0.7; }
+
+.live-tag {
+  font-size: 11px;
+  background: #f1f5f9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+
+/* Tabla */
+.table-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background: #f8fafc;
+  position: sticky;
+  top: 0;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+  z-index: 5;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+tbody tr:hover { background-color: #f8fafc; }
+tbody tr.selected { background-color: #eff6ff; border-left: 4px solid var(--color-accent); }
+
+tbody td {
+  padding: 12px 16px;
+  font-size: 13px;
+  color: var(--text-main);
+}
+
+tbody td.font-mono {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+tr.estado-bajo .badge-status { background: #dcfce7; color: #166534; }
+tr.estado-medio .badge-status { background: #fef3c7; color: #92400e; }
+tr.estado-alto .badge-status { background: #fee2e2; color: #991b1b; }
+
+tr.estado-alto { background-color: #fff1f2 !important; }
+
+/* Mapa */
+#map {
+  width: 100%;
+  height: 100%;
+  background: #e2e8f0;
+}
+
+/* Contenedor principal de la página */
+.main-container {
+  display: grid;
+  grid-template-rows: 55vh 45vh;/* subir las cards inferiores más arriba */
+  gap: 1rem; /* opcional: separación entre filas */
+}
+
+/* Chart */
+.chart-wrapper {
+  height: 100%; /* ocupar todo el contenedor */
+  padding: 0;   /* eliminar padding extra */
+}
+
+
+/* Alert Banner */
+#alertBanner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--color-danger);
+  color: white;
+  padding: 10px 24px;
+  font-weight: 600;
+  display: none;
+  z-index: 2000;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  animation: slideDown 0.3s ease-out;
+}
+ .prediction-summary {
+   margin-top: 0;
+   background: #fff;
+   padding: 8px;
+   border-radius: 8px;
+   border: 1px solid #eee;
+   display: flex;
+   flex-direction: column;
+ }
+ .prediction-summary .pred-images {
+   display: block;
+   margin-top: 6px;
+ }
+ .prediction-summary img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+ }
+/* Grid dentro del panel derecho: mitad izquierda predicción, mitad derecha histórico */
+.panel-chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+  height: calc(100% - 44px);
+}
+.prediction-summary .pred-images img#grafica {
+  max-width: 100%;
+}
+.chart-wrapper {
+  padding: 0;
+  height: 100%;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 300px auto;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  .panel-map { grid-row: 1; grid-column: 1; }
+  .panel-list { grid-row: 2; grid-column: 1; }
+  .panel-chart { grid-row: 3; grid-column: 1; }
+  
+  thead th { position: relative; }
+}
+
+#alertBanner {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--color-danger);
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+  z-index: 3000;
+  display: none;
+  animation: alertFade 0.25s ease-out;
+  max-width: 260px;
+}
+/* POPUP PERSONALIZADO */
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.popup-content {
+  padding: 12px 16px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+/* COLORES */
+.popup-alto {
+  border-left: 6px solid #10b981; /* verde */
+}
+
+.popup-medio {
+  border-left: 6px solid #facc15; /* amarillo */
+}
+
+.bajo-alto {
+  border-left: 6px solid #ef4444; /* rojo */
+}
+.dark-toggle {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--text-main);
+}
+/* =============================
+   MODO OSCURO
+=============================*/
+body.dark {
+  --bg-body: #0f172a;        /* slate-900 */
+  --bg-card: #1e293b;        /* slate-800 */
+  --text-main: #f1f5f9;      /* slate-100 */
+  --text-muted: #94a3b8;     /* slate-400 */
+
+  --color-primary: #e2e8f0;
+  --shadow: none;
+}
+
+body.dark header {
+  background: var(--bg-card);
+  border-bottom: 1px solid #334155;
+}
+
+body.dark section h2 {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark section {
+  background: var(--bg-card);
+  border-color: #334155;
+}
+
+body.dark table thead th {
+  background: #1e293b;
+  border-bottom: 1px solid #334155;
+}
+
+body.dark tbody tr:hover {
+  background-color: #334155;
+}
+
+body.dark tbody tr.selected {
+  background-color: #1e40af;
+}
+
+body.dark td {
+  color: var(--text-main);
+}
+
+body.dark #map {
+  filter: invert(90%) hue-rotate(180deg);
+}
+
+body.dark .prediction-summary {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+body.dark .popup-content {
+  color: white;
+}
+/* =============================
+   POPUP MODO OSCURO 🌙
+=============================*/
+
+body.dark .leaflet-popup-content-wrapper {
+  background: #1e293b !important;   /* slate-800 */
+  color: #f1f5f9 !important;        /* texto claro */
+  border: 1px solid #334155;
+}
+
+body.dark .leaflet-popup-tip {
+  background: #1e293b !important;
+  border: 1px solid #334155;
+}
+
+body.dark .popup-content {
+  color: #f1f5f9 !important;
+}
+.map-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid #cbd5e1;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 500;
+  box-shadow: var(--shadow);
+}
+body.dark .map-btn {
+  background: #1e293b;
+  border-color: #334155;
+  color: #f1f5f9;
+}
+/* Tooltip de hint */
+.leaflet-popup-content-wrapper.click-hint {
+  background: #333;
+  color: white;
+  font-size: 14px;
+  border-radius: 12px;
+  padding: 6px 10px;
+  text-align: center;
+}
+
+.leaflet-popup-tip.click-hint {
+  background: #333;
+}
+
+@media (prefers-color-scheme: light) {
+  .leaflet-popup-content-wrapper.click-hint {
+    background: #fff;
+    color: #111;
+  }
+  .leaflet-popup-tip.click-hint {
+    background: #fff;
+  }
+}
