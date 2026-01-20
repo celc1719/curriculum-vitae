@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Centro de Monitoreo — Protección Civil</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+      (function(){
+        var s = document.createElement('script');
+        s.src = '/socket.io/socket.io.js';
+        s.async = false;
+        s.onload = function(){ console.log('Socket.io local cargado'); };
+        s.onerror = function(){
+          console.warn('Cargando Socket.io CDN fallback');
+          var c = document.createElement('script');
+          c.src = 'https://cdn.socket.io/4.8.1/socket.io.min.js';
+          c.async = false;
+          document.head.appendChild(c);
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="header-brand">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div>
+          <h1>Protección Civil</h1>
+          <p>Monitoreo de Pasos a Desnivel</p>
+        </div>
+      </div>
+      <button id="darkModeBtn" class="dark-toggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="panel-list left">
+        <h2>
+          <span><i class="fa-solid fa-list-ul"></i> Túneles Activos</span>
+          <span class="live-tag">EN VIVO</span>
+        </h2>
+        <div class="table-container">
+          <table id="tunnelTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Ubicación</th>
+                <th>Nivel (cm)</th>
+                <th>Estado</th>
+                <th>Hora</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Predicción debajo de Túneles (columna izquierda) -->
+      <section class="panel-pred-left">
+        <h2><i class="fa-solid fa-chart-line"></i> Predicción</h2>
+        <div id="predictionSummary" class="prediction-summary">
+          <div id="predText">Cargando predicción...</div>
+          <div class="pred-images">
+            <img id="grafica" src="" alt="Gráfica de predicción" />
+          </div>
+        </div>
+      </section>
+
+      <section class="panel-map center">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Mapa Geoespacial</h2>      
+        <div id="map"></div>
+      </section>
+
+      <!-- ========================================= -->
+      <!--     PANEL DE HISTÓRICO + NUEVAS GRÁFICAS -->
+      <!-- ========================================= -->
+      <section class="panel-chart right">
+        <h2><i class="fa-solid fa-chart-line"></i> Histórico de Nivel</h2>
+        <div class="chart-wrapper">
+          <canvas id="nivelChart"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="/dashboard/main.js"></script>
+
+    <script>
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          if (mutation.addedNodes.length) {
+            const rows = document.querySelectorAll('#tunnelTable tbody tr');
+            rows.forEach(row => {
+               const cells = row.querySelectorAll('td');
+               if(cells.length > 3) {
+                 const statusCell = cells[3];
+                 if(!statusCell.querySelector('.badge')) {
+                   const text = statusCell.innerText;
+                   statusCell.innerHTML = `<span class="badge badge-status">${text}</span>`;
+                 }
+                 cells[2].classList.add('font-mono');
+               }
+            });
+          }
+        });
+      });
+      
+      const tableBody = document.querySelector('#tunnelTable tbody');
+      if(tableBody) observer.observe(tableBody, { childList: true });
+    </script>
+
+    <!-- DARK MODE -->
+    <script>
+    const darkBtn = document.getElementById("darkModeBtn");
+
+    if (localStorage.getItem("dark-mode") === "on") {
+      document.body.classList.add("dark");
+    }
+
+    darkBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+
+      const enabled = document.body.classList.contains("dark");
+      localStorage.setItem("dark-mode", enabled ? "on" : "off");
+    });
+    </script>
+
+  </body>
+</html>
