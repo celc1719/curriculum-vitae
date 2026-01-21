@@ -1,11 +1,11 @@
 # Academic & Personal Projects Repository
 
-## 📌 Español
+## Español
 
-Este repositorio reúne diversos **proyectos académicos y personales** desarrollados a lo largo de mi formación y aprendizaje independiente.  
+Este repositorio reúne diversos **proyectos académicos y personales** desarrollados a lo largo de la formación y aprendizaje independiente.  
 Cada proyecto aborda diferentes áreas como programación, sistemas embebidos, bases de datos y desarrollo web.
 
-El objetivo de este repositorio es **centralizar mi trabajo**, facilitar su consulta y servir como **portafolio técnico**.
+El objetivo de este repositorio es **centralizar el trabajo**, facilitar su consulta y servir como **portafolio técnico**.
 
 ### 📂 Contenido
 - Proyectos académicos
@@ -17,11 +17,12 @@ Cada carpeta incluye su propia documentación y, cuando aplica, una demostració
 
 ### 🛠️ Tecnologías utilizadas
 - Python
-- C / C++
+- C++
 - JavaScript
 - HTML / CSS
 - MongoDB
 - Raspberry Pi
+- Matlab
 - Otras herramientas y frameworks según el proyecto
 
 ---
@@ -31,7 +32,7 @@ Cada carpeta incluye su propia documentación y, cuando aplica, una demostració
 This repository contains a collection of **academic and personal projects** developed throughout my studies and independent learning process.  
 Each project focuses on different areas such as programming, embedded systems, databases, and web development.
 
-The main goal of this repository is to **centralize my work**, make it easily accessible, and serve as a **technical portfolio**.
+The main goal of this repository is to **centralize the work**, make it easily accessible, and serve as a **technical portfolio**.
 
 ### 📂 Contents
 - Academic projects
@@ -43,9 +44,10 @@ Each folder includes its own documentation and, when applicable, a live demo or 
 
 ### 🛠️ Technologies Used
 - Python
-- C / C++
+- C++
 - JavaScript
 - HTML / CSS
 - MongoDB
 - Raspberry Pi
+- Matlab
 - Other tools and frameworks depending on the project
