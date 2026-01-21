@@ -12,7 +12,6 @@ El trabajo se centra en:
 - Comparar diferentes estrategias de solución
 - Destacar la importancia de las estructuras de datos para mejorar el rendimiento
 
-⚠️ **Nota:** Este proyecto es **completamente teórico** y **no incluye implementación de código**.
 
 ### 🧠 Temas abordados
 - Historia del problema de las 8 reinas
@@ -34,8 +33,6 @@ This work focuses on:
 - Analyzing its computational complexity
 - Comparing different solution strategies
 - Highlighting the importance of data structures in performance optimization
-
-⚠️ **Note:** This is a **purely theoretical project** and **does not include any code implementation**.
 
 ### 🧠 Topics Covered
 - History of the 8 Queens Puzzle
