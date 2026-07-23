@@ -1,6 +1,6 @@
-# 🧨 Buscaminas en Python (Consola)
+# Buscaminas en Python (Consola)
 
-## 🇪🇸 Descripción (Español)
+## Descripción (Español)
 
 Este proyecto es una implementación del clásico **juego Buscaminas**, desarrollada en **Python** durante el **primer semestre** de la carrera como ejercicio práctico de programación.
 
@@ -16,7 +16,7 @@ El proyecto pone en práctica conceptos fundamentales de programación como:
 
 ---
 
-## 🎮 Funcionalidad
+## Funcionalidad
 
 - Generación automática del tablero
 - Colocación aleatoria de minas
@@ -29,7 +29,7 @@ El proyecto pone en práctica conceptos fundamentales de programación como:
 
 ---
 
-## ⌨️ Controles
+## Controles
 
 - `W`, `A`, `S`, `D` → Moverse por el tablero  
 - `M` → Descubrir una casilla  
@@ -38,7 +38,7 @@ El proyecto pone en práctica conceptos fundamentales de programación como:
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - Python
 - Programación estructurada
@@ -46,13 +46,13 @@ El proyecto pone en práctica conceptos fundamentales de programación como:
 
 ---
 
-## 🎯 Objetivo del proyecto
+## Objetivo del proyecto
 
 Aplicar los conocimientos básicos de programación adquiridos en el primer semestre, desarrollando un juego funcional que refuerce la **lógica algorítmica**, el manejo de estructuras de datos y la interacción con el usuario desde consola.
 
 ---
 
-## 🇺🇸 Description (English)
+## Description (English)
 
 This project is an implementation of the classic **Minesweeper game**, developed in **Python** during the **first semester** as a programming practice project.
 
@@ -68,7 +68,7 @@ This project applies fundamental programming concepts such as:
 
 ---
 
-## 🎮 Features
+## Features
 
 - Automatic board generation
 - Random mine placement
@@ -81,7 +81,7 @@ This project applies fundamental programming concepts such as:
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - Python
 - Structured programming
@@ -89,6 +89,6 @@ This project applies fundamental programming concepts such as:
 
 ---
 
-## 🎯 Project Goal
+## Project Goal
 
 To apply and reinforce basic programming knowledge acquired during the first semester by developing a functional game that strengthens **algorithmic thinking**, data structure handling, and user interaction through the console.
