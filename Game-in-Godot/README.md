@@ -1,6 +1,6 @@
-# 🎮 Cosmo Rat – Propuesta de Videojuego
+# Cosmo Rat – Propuesta de Videojuego
 
-## 🇪🇸 Descripción (Español)
+## Descripción (Español)
 
 **Cosmo Rat** es una **propuesta de videojuego** desarrollada como proyecto académico utilizando el motor **Godot**.  
 Este repositorio **no incluye el código fuente**, ya que el desarrollo se realizó en otra computadora. Sin embargo, se conserva la **documentación y presentación del proyecto**, incluyendo capturas del juego y el diseño conceptual.
@@ -23,7 +23,7 @@ Este proyecto es principalmente **conceptual y documental**, demostrando habilid
 
 ---
 
-## 🛠️ Tecnologías
+## Tecnologías
 
 - Godot (uso conceptual)
 - Diseño de videojuegos
@@ -31,11 +31,11 @@ Este proyecto es principalmente **conceptual y documental**, demostrando habilid
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Desarrollar y presentar una propuesta sólida de videojuego aplicando conceptos de diseño, narrativa y planeación de jugabilidad dentro de un proyecto académico.
 
-## 🇺🇸 Description (English)
+## Description (English)
 
 **Cosmo Rat** is a **video game proposal** developed as an academic project using the **Godot** engine.  
 This repository **does not include source code**, as the development was carried out on another computer. However, the project’s **documentation and presentation** are preserved, including game screenshots and conceptual design.
@@ -58,7 +58,7 @@ This project is mainly **conceptual and documentary**, demonstrating skills in:
 
 ---
 
-## 🛠️ Technologies
+## Technologies
 
 - Godot (conceptual use)
 - Game Design
@@ -66,7 +66,7 @@ This project is mainly **conceptual and documentary**, demonstrating skills in:
 
 ---
 
-## 🎯 Goal
+## Goal
 
 To develop and present a solid video game proposal by applying game design, narrative, and gameplay planning concepts within an academic project.
 
