@@ -1,6 +1,6 @@
-# 📽️ Sistema de Gestión de Videos en C++
+# Sistema de Gestión de Videos en C++
 
-## 🇪🇸 Descripción (Español)
+## Descripción (Español)
 
 Este proyecto consiste en un sistema de gestión de videos desarrollado en **C++**, utilizando **Programación Orientada a Objetos**.  
 El sistema administra **películas y capítulos de series**, los cuales se cargan desde un archivo de texto y se gestionan mediante un menú interactivo en consola.
@@ -20,7 +20,7 @@ El proyecto está enfocado principalmente en el **diseño teórico y documental*
 
 ---
 
-## 🇺🇸 Description (English)
+## Description (English)
 
 This project is a **video management system** developed in **C++** using **Object-Oriented Programming** principles.  
 The system manages **movies and TV series episodes**, which are loaded from a text file and controlled through an interactive console menu.
@@ -40,7 +40,7 @@ The project is mainly **theoretical and documentary**, focusing on demonstrating
 
 ---
 
-## 🛠️ Tecnologías / Technologies
+## Tecnologías / Technologies
 
 - C++
 - Programación Orientada a Objetos / Object-Oriented Programming
@@ -48,7 +48,7 @@ The project is mainly **theoretical and documentary**, focusing on demonstrating
 
 ---
 
-## 🎯 Objetivo / Goal
+## Objetivo / Goal
 
 Aplicar y reforzar los conceptos fundamentales de la Programación Orientada a Objetos mediante un proyecto práctico y estructurado.
 
