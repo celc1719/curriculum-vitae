@@ -7,7 +7,7 @@ Cada proyecto aborda diferentes áreas como programación, sistemas embebidos, b
 
 El objetivo de este repositorio es **centralizar el trabajo**, facilitar su consulta y servir como **portafolio técnico**.
 
-### 📂 Contenido
+### Contenido
 - Proyectos académicos
 - Prácticas y ejercicios
 - Proyectos personales y experimentales
@@ -15,7 +15,7 @@ El objetivo de este repositorio es **centralizar el trabajo**, facilitar su cons
 
 Cada carpeta incluye su propia documentación y, cuando aplica, una demostración o enlace funcional.
 
-### 🛠️ Tecnologías utilizadas
+### Tecnologías utilizadas
 - Python
 - C++
 - JavaScript
@@ -27,14 +27,14 @@ Cada carpeta incluye su propia documentación y, cuando aplica, una demostració
 
 ---
 
-## 📌 English
+## English
 
 This repository contains a collection of **academic and personal projects** developed throughout my studies and independent learning process.  
 Each project focuses on different areas such as programming, embedded systems, databases, and web development.
 
 The main goal of this repository is to **centralize the work**, make it easily accessible, and serve as a **technical portfolio**.
 
-### 📂 Contents
+### Contents
 - Academic projects
 - Practice exercises
 - Personal and experimental projects
@@ -42,7 +42,7 @@ The main goal of this repository is to **centralize the work**, make it easily a
 
 Each folder includes its own documentation and, when applicable, a live demo or functional link.
 
-### 🛠️ Technologies Used
+### Technologies Used
 - Python
 - C++
 - JavaScript
