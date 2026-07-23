@@ -1,6 +1,6 @@
 # Software Requirements Specification (SRS)
 
-## 📌 Español
+## Español
 
 Este proyecto corresponde a un **documento de Especificación de Requerimientos de Software (SRS)**, elaborado con un enfoque formal y académico siguiendo buenas prácticas de ingeniería de software.
 
@@ -11,10 +11,10 @@ El objetivo principal del SRS es:
 - Facilitar la comunicación entre usuarios, desarrolladores y evaluadores
 - Establecer una referencia clara antes de cualquier implementación
 
-⚠️ **Nota:** Este trabajo es **más que nada documental y teórico**.  
+ **Nota:** Este trabajo es **más que nada documental y teórico**.  
 Esta basado en un código previo pero incompleto a este documento.
 
-### 🧠 Contenido principal
+### Contenido principal
 - Introducción y propósito del sistema
 - Alcance del software
 - Definiciones y terminología
@@ -26,7 +26,7 @@ Esta basado en un código previo pero incompleto a este documento.
 
 ---
 
-## 📌 English
+## English
 
 This project consists of a **Software Requirements Specification (SRS) document**, developed using a formal and academic approach aligned with standard software engineering practices.
 
@@ -37,10 +37,10 @@ The main purpose of the SRS is to:
 - Improve communication between stakeholders
 - Provide a clear reference before implementation begins
 
-⚠️ **Note**: This work is **primarily documentary and theoretical.**
+ **Note**: This work is **primarily documentary and theoretical.**
 It is based on a previous piece of code that is incomplete relative to this document.
 
-### 🧠 Main Contents
+### Main Contents
 - System introduction and purpose
 - Software scope
 - Definitions and terminology
