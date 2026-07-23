@@ -1,6 +1,6 @@
 # 8 Queens Puzzle
 
-## 📌 Español
+## Español
 
 Este proyecto académico presenta un **análisis teórico del problema de las 8 reinas**, un clásico de las ciencias de la computación y de los problemas de satisfacción de restricciones (CSP).
 
@@ -13,7 +13,7 @@ El trabajo se centra en:
 - Destacar la importancia de las estructuras de datos para mejorar el rendimiento
 
 
-### 🧠 Temas abordados
+### Temas abordados
 - Historia del problema de las 8 reinas
 - Problemas de satisfacción de restricciones (CSP)
 - Algoritmo de backtracking
@@ -22,7 +22,7 @@ El trabajo se centra en:
 
 ---
 
-## 📌 English
+## English
 
 This academic project presents a **theoretical analysis of the 8 Queens Puzzle**, a classic problem in computer science and constraint satisfaction problems (CSP).
 
